@@ -14,7 +14,6 @@
     ->email
     ->password
     
-    cf ic login
+    cf ic init    
     
-    cf ic init
   .....
