@@ -10,8 +10,11 @@
     cf install-plugin https://static-ice.ng.bluemix.net/ibm-containers-linux_x64
     cf plugins
     
-  cf ic init
   cf login -a api.ng.bluemix.net
     ->email
     ->password
+    
+    cf ic login
+    
+    cf ic init
   .....
