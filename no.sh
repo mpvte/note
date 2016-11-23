@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN pip install shadowsocks
 RUN ssserver -p 443 -k ${passwd} -m aes-256-cfb
+EXPOSE 443
 _EOF_
 
 cf ic build -t ub:v1 . 
