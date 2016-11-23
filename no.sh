@@ -17,8 +17,8 @@ RUN apt-get update && apt-get install -y \
  && apt-get install -y libsodium-dev python-pip
 
 RUN pip install shadowsocks
-RUN ssserver -p 443 -k ${passwd} -m aes-256-cfb
 EXPOSE 443
+ENTRYPOINT ["/usr/local/bin/ssserver -p 443 -k ${passwd} -m aes-256-cfb"]
 _EOF_
 
 cf ic build -t ub:v1 . 
